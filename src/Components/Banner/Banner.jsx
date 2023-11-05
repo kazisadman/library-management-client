@@ -36,7 +36,7 @@ const Banner = () => {
           <SwiperSlide>Slide 9</SwiperSlide>
         </Swiper>
       </>
-      ){" "}
+      {" "}
     </div>
   );
 };
