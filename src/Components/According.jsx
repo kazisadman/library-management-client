@@ -5,7 +5,7 @@ const According = () => {
       <h1 className="text-5xl text-gray-600"> asked questions</h1>
 
       <div className="collapse collapse-plus bg-base-200">
-        <input type="radio" name="my-accordion-3" checked="checked" />
+        <input type="radio" name="my-accordion-3" defaultChecked />
         <div className="collapse-title text-xl font-medium">
           Q: How do I borrow a book from the library?
         </div>

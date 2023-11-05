@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const Bookcatagory = ({ catagoryinfo }) => {
+
   const { image, name, description } = catagoryinfo;
   return (
     <div>
@@ -11,9 +13,11 @@ const Bookcatagory = ({ catagoryinfo }) => {
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
           <p>{description}</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Explore</button>
-          </div>
+          <Link to={`/${name}`}>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Explore</button>
+            </div>
+          </Link>
         </div>
       </div>{" "}
     </div>

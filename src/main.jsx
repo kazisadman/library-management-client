@@ -5,6 +5,7 @@ import "./index.css";
 import Root from "./Routes/Root";
 import Home from "./Pages/Home";
 import Addbook from "./Pages/Addbook";
+import Catagorybooks from "./Pages/Catagorybooks";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
       {
         path: "/addbook",
         element: <Addbook></Addbook>,
+      },
+      {
+        path: "/:catagory",
+        element: <Catagorybooks></Catagorybooks>,
+        loader: () => fetch("/booksinfo.json"),
       },
     ],
   },
