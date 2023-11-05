@@ -1,18 +1,22 @@
 [
   {
     "name": "History",
-    "image": "history_category.jpg"
+    "image": "https://i.ibb.co/djkRW3v/historybookcover.jpg",
+    "description": "Explore the past and uncover the stories of ancient civilizations, significant events, and influential figures that shaped the world we live in today."
   },
   {
     "name": "Sci-fi",
-    "image": "scifi_category.jpg"
+    "image": "https://i.ibb.co/YRGTT2F/sci-fi-book-cover.jpg",
+    "description": "Immerse yourself in a world of futuristic technology, interstellar travel, and mind-bending concepts as you journey through the realms of science fiction."
   },
   {
     "name": "Fashion",
-    "image": "fashion_category.jpg"
+    "image": "https://i.ibb.co/RNkmXmc/fashion-books-cover.jpg",
+    "description": "From haute couture to everyday style, delve into the world of fashion design, iconic photography, trends, and the art of dressing with flair and creativity."
   },
   {
     "name": "Drama",
-    "image": "drama_category.jpg"
+    "image": "https://i.ibb.co/2qMrvfq/drama-books-cover.jpg",
+    "description": "Experience the power of storytelling through theatrical masterpieces, behind-the-scenes glimpses of Broadway, powerful monologues"
   }
 ]

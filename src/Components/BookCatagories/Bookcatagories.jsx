@@ -5,7 +5,7 @@ const Bookcatagories = () => {
   const [catagoriesinfo, setcatagoriesinfo] = useState([]);
 
   useEffect(() => {
-    fetch("/public/catagoriesinfo.json")
+    fetch("/catagoriesinfo.json")
       .then((res) => res.json())
       .then((data) => setcatagoriesinfo(data));
   }, []);
