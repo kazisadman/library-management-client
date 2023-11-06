@@ -34,8 +34,71 @@ const Bookdetailscard = ({ bookdetail }) => {
               <div className="badge badge-outline">{format}</div>
             </div>{" "}
             <div className="flex justify-between items-center">
-              <button className="btn btn-primary">Borrow</button>
-              <button className="btn btn-primary">Read</button>
+              {/* You can open the modal using document.getElementById('ID').showModal() method */}
+              <button
+                className="btn btn-primary"
+                onClick={() =>
+                  document.getElementById("my_modal_3").showModal()
+                }
+              >
+                Borrow
+              </button>
+              <dialog id="my_modal_3" className="modal">
+                <div className="modal-box">
+                  <form method="dialog">
+                    {/* if there is a button in form, it will close the modal */}
+                    <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                      ✕
+                    </button>
+                  </form>
+                  <form>
+                    <div className="form-control w-full">
+                      <label className="label">
+                        <span className="label-text">Name</span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Name"
+                        className="input input-bordered"
+                        required
+                      />
+                    </div>
+                    <div className="form-control w-full">
+                      <label className="label">
+                        <span className="label-text">Email</span>
+                      </label>
+                      <input
+                        type="Email"
+                        placeholder="Email"
+                        className="input input-bordered"
+                        required
+                      />
+                    </div>
+                    <div className="form-control w-full">
+                      <label className="label">
+                        <span className="label-text">Borrow Date</span>
+                      </label>
+                      <input
+                        type="date"
+                        className="input input-bordered"
+                        required
+                      />
+                    </div>
+                    <div className="form-control w-full">
+                      <label className="label">
+                        <span className="label-text">Return Date</span>
+                      </label>
+                      <input
+                        type="date"
+                        className="input input-bordered"
+                        required
+                      />
+                    </div>
+                    <button className="btn btn-primary my-4">Submit</button>
+                  </form>
+                </div>
+              </dialog>{" "}
+              <button className="btn btn-primary ">Read</button>
             </div>
           </div>
         </div>

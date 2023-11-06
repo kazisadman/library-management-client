@@ -25,9 +25,9 @@ const Bestsellingbooks = () => {
       <h2>People’s Choice</h2>
       <h1 className="text-5xl text-gray-600">Bestselling Books</h1>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
-        {bestsellings.slice(0, 6).map((bestselling, index) => (
+        {bestsellings.slice(0, 6).map((bestselling) => (
           <Bestsellingbook
-            key={index}
+            key={bestselling._id}
             bestselling={bestselling}
           ></Bestsellingbook>
         ))}

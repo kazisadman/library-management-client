@@ -2,7 +2,7 @@
   {
     "_id": "5f732b05a9c18e0001c0b2a1",
     "name": "The History of Civilization",
-    "image": "history_book1.jpg",
+    "image": "https://i.ibb.co/YWZ9x0Q/book1.jpg",
     "quantity": 10,
     "author": "John Smith",
     "category": "History",
@@ -16,7 +16,7 @@
   {
     "_id": "5f732b05a9c18e0001c0b2a2",
     "name": "World War II: A Comprehensive Guide",
-    "image": "history_book2.jpg",
+    "image": "https://i.ibb.co/5420Gbf/book2.jpg",
     "quantity": 8,
     "author": "Jane Doe",
     "category": "History",
@@ -30,7 +30,7 @@
   {
     "_id": "5f732b05a9c18e0001c0b2a3",
     "name": "Ancient Civilizations: From Mesopotamia to Rome",
-    "image": "history_book3.jpg",
+    "image": "https://i.ibb.co/qYsT9Z2/book3.jpg",
     "quantity": 12,
     "author": "David Johnson",
     "category": "History",
@@ -44,7 +44,7 @@
   {
     "_id": "5f732b05a9c18e0001c0b2a4",
     "name": "The Renaissance: Art, Culture, and Society",
-    "image": "history_book4.jpg",
+    "image": "https://i.ibb.co/SyLr2Yw/book4.jpg",
     "quantity": 6,
     "author": "Emily Williams",
     "category": "History",
@@ -58,7 +58,7 @@
   {
     "_id": "5f732b05a9c18e0001c0b2a5",
     "name": "The Galactic Chronicles",
-    "image": "scifi_book1.jpg",
+    "image": "https://i.ibb.co/2cBy6Bj/book5.jpg",
     "quantity": 9,
     "author": "Michael Roberts",
     "category": "Sci-fi",
@@ -72,7 +72,7 @@
   {
     "_id": "5f732b05a9c18e0001c0b2a6",
     "name": "Time Travelers: A Quantum Odyssey",
-    "image": "scifi_book2.jpg",
+    "image": "https://i.ibb.co/HDcNzbW/book6.jpg",
     "quantity": 7,
     "author": "Sarah Adams",
     "category": "Sci-fi",
@@ -86,7 +86,7 @@
   {
     "_id": "5f732b05a9c18e0001c0b2a7",
     "name": "The Android Revolution",
-    "image": "scifi_book3.jpg",
+    "image": "https://i.ibb.co/nCbPwMW/book7.jpg",
     "quantity": 11,
     "author": "James Mitchell",
     "category": "Sci-fi",
@@ -100,7 +100,7 @@
   {
     "_id": "5f732b05a9c18e0001c0b2a8",
     "name": "Beyond the Event Horizon",
-    "image": "scifi_book4.jpg",
+    "image": "https://i.ibb.co/1m9xYBG/book8.jpg",
     "quantity": 5,
     "author": "Laura Thompson",
     "category": "Sci-fi",
@@ -114,7 +114,7 @@
   {
     "_id": "5f732b05a9c18e0001c0b2a9",
     "name": "The Art of Fashion Design",
-    "image": "fashion_book1.jpg",
+    "image": "https://i.ibb.co/gFDbDy6/book9.jpg",
     "quantity": 8,
     "author": "Elena Rodriguez",
     "category": "Fashion",
@@ -128,7 +128,7 @@
   {
     "_id": "5f732b05a9c18e0001c0b2aa",
     "name": "Iconic Fashion Photography: Through the Ages",
-    "image": "fashion_book2.jpg",
+    "image": "https://i.ibb.co/GT4YBjj/book10.jpg",
     "quantity": 6,
     "author": "Carlos Sanchez",
     "category": "Fashion",
@@ -142,7 +142,7 @@
   {
     "_id": "5f732b05a9c18e0001c0b2ab",
     "name": "Fashion Forward: Trends and Influences",
-    "image": "fashion_book3.jpg",
+    "image": "https://i.ibb.co/D4fhwpt/book11.jpg",
     "quantity": 10,
     "author": "Sophia Davis",
     "category": "Fashion",
@@ -156,7 +156,7 @@
   {
     "_id": "5f732b05a9c18e0001c0b2ac",
     "name": "The Fashion Designer's Handbook",
-    "image": "fashion_book4.jpg",
+    "image": "https://i.ibb.co/281CNp7/book12.jpg",
     "quantity": 7,
     "author": "Alex Turner",
     "category": "Fashion",
@@ -170,7 +170,7 @@
   {
     "_id": "5f732b05a9c18e0001c0b2ad",
     "name": "Theatrical Masterpieces: A Collection of Classic Plays",
-    "image": "drama_book1.jpg",
+    "image": "https://i.ibb.co/WB3PXt8/book13.jpg",
     "quantity": 9,
     "author": "William Shakespeare, Tennessee Williams, Anton Chekhov, and more",
     "category": "Drama",
@@ -184,7 +184,7 @@
   {
     "_id": "5f732b05a9c18e0001c0b2ae",
     "name": "Behind the Curtain: The Life of a Broadway Star",
-    "image": "drama_book2.jpg",
+    "image": "https://i.ibb.co/x85rJc2/book14.jpg",
     "quantity": 7,
     "author": "Emily Davis",
     "category": "Drama",
@@ -198,7 +198,7 @@
   {
     "_id": "5f732b05a9c18e0001c0b2af",
     "name": "Dramatic Monologues: From Stage to Screen",
-    "image": "drama_book3.jpg",
+    "image": "https://i.ibb.co/N1qcjpS/book15.jpg",
     "quantity": 11,
     "author": "Michael Roberts",
     "category": "Drama",
@@ -212,7 +212,7 @@
   {
     "_id": "5f732b05a9c18e0001c0b2ag",
     "name": "The Drama Teacher's Guide: Techniques and Tips for Success",
-    "image": "drama_book4.jpg",
+    "image": "https://i.ibb.co/Bn9wk1P/book16.jpg",
     "quantity": 5,
     "author": "Sarah Adams",
     "category": "Drama",

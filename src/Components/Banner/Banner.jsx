@@ -1,4 +1,3 @@
-import slide1 from "../../../src/assets/bmw-m4-2970890_1280.jpg";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -24,19 +23,19 @@ const Banner = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <img src={slide1} alt="" />
+            <img src={"https://i.ibb.co/5TTDwMG/cover1.jpg"} alt="" />
           </SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
+          <SwiperSlide>
+            <img src={"https://i.ibb.co/Kwv2fZY/cover2.jpg"} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={"https://i.ibb.co/4JS96x9/cover3.jpg"} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={"https://i.ibb.co/FzZ9Kfw/cover4.jpg"} alt="" />
+          </SwiperSlide>
         </Swiper>
-      </>
-      {" "}
+      </>{" "}
     </div>
   );
 };

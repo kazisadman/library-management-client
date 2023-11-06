@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
 
 const Bestsellingbook = ({ bestselling }) => {
-  const { name, author, rating, format } = bestselling;
+  const { image,name, author, rating, format } = bestselling;
   return (
     <div className="card bg-base-100 shadow-xl">
       <figure>
         <img
-          src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+        className="h-56"
+          src={image}
           alt="Shoes"
         />
       </figure>
