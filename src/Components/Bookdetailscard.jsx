@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const Bookdetailscard = ({ bookdetail }) => {
+
   const {
     name,
     image,
@@ -33,10 +35,10 @@ const Bookdetailscard = ({ bookdetail }) => {
               <div className="badge badge-outline">{category}</div>
               <div className="badge badge-outline">{format}</div>
             </div>{" "}
-            <div className="flex justify-between items-center">
+            <div className="flex justify-start items-center">
               {/* You can open the modal using document.getElementById('ID').showModal() method */}
               <button
-                className="btn btn-primary"
+                className="btn btn-primary mr-6"
                 onClick={() =>
                   document.getElementById("my_modal_3").showModal()
                 }
@@ -98,7 +100,9 @@ const Bookdetailscard = ({ bookdetail }) => {
                   </form>
                 </div>
               </dialog>{" "}
-              <button className="btn btn-primary ">Read</button>
+              <Link to={'read'}>
+                <button className="btn btn-primary ">Read</button>
+              </Link>
             </div>
           </div>
         </div>

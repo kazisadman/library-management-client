@@ -10,11 +10,14 @@ import Bookdetails from "./Pages/Bookdetails";
 import Borrowbook from "./Pages/Borrowbook";
 import Allbooks from "./Pages/Allbooks";
 import Updatebook from "./Pages/Updatebook";
+import Error from "./Pages/Error";
+import Read from "./Pages/Read";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -32,6 +35,11 @@ const router = createBrowserRouter([
       {
         path: "/:catagory/:id",
         element: <Bookdetails></Bookdetails>,
+        loader: () => fetch("/booksinfo.json"),
+      },
+      {
+        path: "/:catagory/:id/read",
+        element: <Read></Read>,
         loader: () => fetch("/booksinfo.json"),
       },
       {
