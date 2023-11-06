@@ -45,6 +45,18 @@ const Addbook = () => {
         <div className="flex justify-between gap-5">
           <div className="form-control w-1/2">
             <label className="label">
+              <span className="label-text">Format</span>
+            </label>
+            <select className="select select-bordered w-full">
+              <option disabled selected>
+                Format
+              </option>
+              <option>Hardcover</option>
+              <option>Paperback</option>
+            </select>
+          </div>
+          <div className="form-control w-1/2">
+            <label className="label">
               <span className="label-text">Catagory</span>
             </label>
             <select className="select select-bordered w-full">
