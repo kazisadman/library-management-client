@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const Borrowedtable = ({ borrowedbook }) => {
-  const { image, name,author } = borrowedbook;
+  const { image, name, author, category } = borrowedbook;
 
   return (
     <>
@@ -12,10 +12,7 @@ const Borrowedtable = ({ borrowedbook }) => {
             <div className="flex items-center space-x-3">
               <div className="avatar">
                 <div className="mask mask-squircle w-12 h-12">
-                  <img
-                    src={image}
-                    alt="Avatar Tailwind CSS Component"
-                  />
+                  <img src={image} alt="Avatar Tailwind CSS Component" />
                 </div>
               </div>
               <div>
@@ -25,8 +22,9 @@ const Borrowedtable = ({ borrowedbook }) => {
             </div>
           </td>
           <td>
-            11/12/2023
+            <div className="font-bold">{category}</div>
           </td>
+          <td>11/12/2023</td>
           <td>23/12/2013</td>
           <th>
             <button className="btn btn-ghost btn-xs">Return</button>

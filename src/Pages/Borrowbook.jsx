@@ -12,6 +12,7 @@ const Borrowbook = () => {
             <thead>
               <tr>
                 <th>Name</th>
+                <th>Category</th>
                 <th>Borrow Date</th>
                 <th>Return Date</th>
                 <th></th>
