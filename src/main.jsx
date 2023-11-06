@@ -9,6 +9,7 @@ import Catagorybooks from "./Pages/Catagorybooks";
 import Bookdetails from "./Pages/Bookdetails";
 import Borrowbook from "./Pages/Borrowbook";
 import Allbooks from "./Pages/Allbooks";
+import Updatebook from "./Pages/Updatebook";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
       {
         path: "/allbooks",
         element: <Allbooks></Allbooks>,
+        loader: () => fetch("/booksinfo.json"),
+      },
+      {
+        path: "/update/:id",
+        element: <Updatebook></Updatebook>,
         loader: () => fetch("/booksinfo.json"),
       },
     ],

@@ -18,7 +18,7 @@ const Allbookinfocard = ({ bookinfo }) => {
             <div className="badge badge-outline">{category}</div>
             <div className="badge badge-outline">{format}</div>
           </div>
-          <Link to={`${_id}`}>
+          <Link to={`/update/${_id}`}>
             <div className="card-actions justify-end">
               <button className="btn btn-primary">Update</button>
             </div>
