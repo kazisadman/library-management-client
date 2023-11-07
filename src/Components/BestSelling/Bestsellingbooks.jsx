@@ -6,7 +6,7 @@ const Bestsellingbooks = () => {
   const [bestsellings, setBestsellings] = useState([]);
 
   useEffect(() => {
-    fetch("/booksinfo.json")
+    fetch("http://localhost:5000/booksinfo")
       .then((res) => res.json())
       .then((data) => setbooksinfo(data));
   }, []);

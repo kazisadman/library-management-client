@@ -1,4 +1,46 @@
+import axios from "axios";
+
 const Addbook = () => {
+  const handleAddbook = (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    const name = form.bookname.value;
+    const author = form.author.value;
+    const image = form.image.value;
+    const format = form.format.value;
+    const category = form.category.value;
+    const quantity = form.quantity.value;
+    const rating = form.rating.value;
+    const shortdescription = form.shortdescription.value;
+
+    const newbook = {
+      name,
+      author,
+      image,
+      format,
+      category,
+      quantity,
+      rating,
+      shortdescription,
+    };
+    console.log(newbook);
+
+    axios
+      .post("http://localhost:5000/booksinfo", newbook)
+      .then((data) => {
+        console.log(data);
+        const toast = document.getElementById("success-alert");
+        toast.classList.remove("hidden");
+        setTimeout(() => {
+          toast.classList.add("hidden");
+        }, 3000);
+      })
+      .catch((err) => console.error(err));
+
+    e.target.reset();
+  };
+
   return (
     <div>
       <div className="flex justify-center items-center">
@@ -6,7 +48,7 @@ const Addbook = () => {
           Add a new book
         </h1>
       </div>
-      <form action="">
+      <form onSubmit={handleAddbook}>
         <div className="flex justify-between gap-5">
           <div className="form-control w-1/2">
             <label className="label">
@@ -15,7 +57,7 @@ const Addbook = () => {
             <input
               type="text"
               placeholder="Name"
-              name="book-name"
+              name="bookname"
               className="input input-bordered"
               required
             />
@@ -26,7 +68,7 @@ const Addbook = () => {
             </label>
             <input
               type="text"
-              name="author-name"
+              name="author"
               placeholder="Author Name"
               className="input input-bordered"
               required
@@ -103,7 +145,7 @@ const Addbook = () => {
           </label>
           <textarea
             type="text"
-            name="short-description"
+            name="shortdescription"
             placeholder="Short Description"
             className="input input-bordered textarea textarea-lg w-full "
             required
@@ -113,6 +155,11 @@ const Addbook = () => {
           <button className="btn btn-primary">Add book</button>
         </div>
       </form>
+      <div id="success-alert" className="toast hidden">
+        <div className="alert alert-success">
+          <span>Added Book Successfully</span>
+        </div>
+      </div>
     </div>
   );
 };

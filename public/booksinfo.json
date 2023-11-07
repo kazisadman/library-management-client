@@ -1,6 +1,5 @@
 [
   {
-    "_id": "5f732b05a9c18e0001c0b2a1",
     "content": "In the heart of the medieval kingdom of Denmark, Prince Hamlet grapples with grief, betrayal, and the weight of avenging his father's murder. Torn between his love for Ophelia and his duty to seek vengeance, Hamlet's inner turmoil drives him to question the nature of reality, the meaning of life, and the consequences of his actions. As Hamlet contemplates his fate, he becomes a figure of introspection and moral complexity, forever etched in the annals of literature.",
     "name": "The History of Civilization",
     "image": "https://i.ibb.co/YWZ9x0Q/book1.jpg",
@@ -15,11 +14,10 @@
     "picked_by_author": false
   },
   {
-    "_id": "5f732b05a9c18e0001c0b2a2",
     "content": "Amidst the rigid confines of 19th-century society, Nora Helmer, a seemingly carefree housewife, embarks on a journey of self-discovery and rebellion. Nora's awakening begins when she realizes that her husband, Torvald, has treated her as a child and a doll, fulfilling his expectations rather than allowing her to develop her own identity. As Nora confronts the limitations imposed upon her, she questions the role of women in society and challenges the patriarchal norms that have defined her existence. Ibsen's groundbreaking play sparked a global debate about women's rights and the importance of individual fulfillment.",
     "name": "World War II: A Comprehensive Guide",
     "image": "https://i.ibb.co/5420Gbf/book2.jpg",
-    "quantity": 8,
+    "quantity": 0,
     "author": "Jane Doe",
     "category": "History",
     "short_description": "An in-depth exploration of World War II.",
@@ -30,7 +28,6 @@
     "picked_by_author": true
   },
   {
-    "_id": "5f732b05a9c18e0001c0b2a3",
     "content": "n the pursuit of the elusive American dream, Willy Loman, a failed salesman, struggles to reconcile his fading glory with the harsh realities of his life. Willy's illusions of success, fueled by his admiration for material wealth and societal recognition, clash with his mounting debts, family conflicts, and declining health. As Willy grapples with disillusionment and despair, he confronts the fragility of the American dream and the pitfalls of chasing external validation. Miller's powerful play serves as a cautionary tale, reminding us of the importance of facing reality and finding true meaning in life.",
     "name": "Ancient Civilizations: From Mesopotamia to Rome",
     "image": "https://i.ibb.co/qYsT9Z2/book3.jpg",
@@ -45,7 +42,6 @@
     "picked_by_author": false
   },
   {
-    "_id": "5f732b05a9c18e0001c0b2a4",
     "content": "ithin the confines of a small apartment in St. Louis, the Wingfield family, a dysfunctional group bound by unspoken desires and lingering regrets, navigates the complexities of human relationships and the fragility of dreams. Laura Wingfield, a painfully shy and insecure young woman, finds solace in her collection of glass figurines, representing a world of beauty and escape from the harsh realities of her existence. As Laura yearns for connection and fulfillment, her family members grapple with their own disappointments and unfulfilled dreams, creating a tapestry of emotional turmoil and unspoken longing. Williams' delicate and poetic play explores themes of loneliness, longing, and the fragility of dreams, leaving an indelible mark on the hearts of readers and audiences alike.",
     "name": "The Renaissance: Art, Culture, and Society",
     "image": "https://i.ibb.co/SyLr2Yw/book4.jpg",
@@ -60,7 +56,6 @@
     "picked_by_author": true
   },
   {
-    "_id": "5f732b05a9c18e0001c0b2a5",
     "content": "n the high-pressure world of fashion, Andy Sachs, an ambitious young woman, lands a coveted job as an assistant to Miranda Priestly, the powerful and demanding editor of Runway magazine. Andy's entry into this glamorous yet ruthless realm exposes her to the intricacies of fashion, the cutthroat competition, and the relentless pursuit of perfection. As Andy navigates the demands of her position, she must confront her own ambitions, her personal relationships, and the true meaning of success in a world where appearances and status reign supreme.",
     "name": "The Galactic Chronicles",
     "image": "https://i.ibb.co/2cBy6Bj/book5.jpg",
@@ -75,7 +70,6 @@
     "picked_by_author": false
   },
   {
-    "_id": "5f732b05a9c18e0001c0b2a6",
     "content": "Coco Chanel, a name synonymous with elegance, revolutionized the fashion world with her timeless designs, her unwavering determination, and her bold rejection of societal constraints. Edmonde Charles-Roux's authorized biography delves into the extraordinary life and career of this fashion icon, tracing her journey from her humble beginnings to her rise to fame and fortune. The book unveils Chanel's creative process, her fierce independence, and her complex personality, providing insights into the woman who transformed the landscape of fashion.",
     "name": "Time Travelers: A Quantum Odyssey",
     "image": "https://i.ibb.co/HDcNzbW/book6.jpg",
@@ -90,7 +84,6 @@
     "picked_by_author": true
   },
   {
-    "_id": "5f732b05a9c18e0001c0b2a7",
     "content": "In a dystopian future where Big Brother watches every move, Winston Smith, an ordinary man, becomes a pawn in a totalitarian regime's relentless pursuit of control and conformity. As Winston grapples with the constant surveillance and the suppression of individuality, he rebels against the system, seeking truth and freedom amidst a world of fear and manipulation. Orwell's chilling novel serves as a stark warning about the dangers of government overreach, the erosion of individual freedoms, and the importance of critical thinking in a world increasingly controlled by technology and surveillance.",
     "name": "The Android Revolution",
     "image": "https://i.ibb.co/nCbPwMW/book7.jpg",
@@ -105,7 +98,6 @@
     "picked_by_author": false
   },
   {
-    "_id": "5f732b05a9c18e0001c0b2a8",
     "content": "In a society engineered for happiness and stability, where people are conditioned from birth to fulfill their assigned roles, Bernard Marx and Lenina Crowne embark on a journey that shatters their illusions of utopia. As they venture beyond the confines of their controlled society, they encounter the harsh realities of the natural world and the consequences of suppressing individual freedom and human emotion. Huxley's satirical novel challenges the pursuit of happiness at the expense of individuality, questioning the very foundations of a society built on genetic engineering and social conditioning.",
     "name": "Beyond the Event Horizon",
     "image": "https://i.ibb.co/1m9xYBG/book8.jpg",
@@ -120,7 +112,6 @@
     "picked_by_author": true
   },
   {
-    "_id": "5f732b05a9c18e0001c0b2a9",
     "content": "Ryland Grace, an amnesiac scientist, wakes up on a spaceship with no memory of who he is or how he got there. As he gradually pieces together his identity and his mission, he discovers that he is on a one-way journey to Tau Ceti, a nearby star system, tasked with saving Earth from an alien threat. With limited resources and no clear path forward, Ryland must rely on his scientific expertise, his newfound allies, and his unwavering determination to fulfill his mission and ensure the survival of humanity. Weir's thrilling and thought-provoking novel explores the power of science and cooperation in the face of seemingly insurmountable challenges.",
     "name": "The Art of Fashion Design",
     "image": "https://i.ibb.co/gFDbDy6/book9.jpg",
@@ -135,7 +126,6 @@
     "picked_by_author": false
   },
   {
-    "_id": "5f732b05a9c18e0001c0b2aa",
     "content": "In this comprehensive and engaging narrative, Geoffrey Blainey takes readers on a sweeping journey through the vast tapestry of human history, from the earliest civilizations to the present day. Blainey examines the rise and fall of empires, the impact of technological advancements, and the enduring influence of cultural and intellectual movements. With a keen eye for detail and a knack for storytelling, Blainey brings to life the pivotal moments and the transformative figures that have shaped our world.",
     "name": "Iconic Fashion Photography: Through the Ages",
     "image": "https://i.ibb.co/GT4YBjj/book10.jpg",
@@ -150,7 +140,6 @@
     "picked_by_author": true
   },
   {
-    "_id": "5f732b05a9c18e0001c0b2ab",
     "content": "Jared Diamond's Pulitzer Prize-winning book delves into the intriguing question of why some civilizations have conquered others throughout history. Diamond challenges traditional Eurocentric narratives and proposes that the uneven distribution of power and resources around the globe is largely due to environmental factors, the availability of certain technologies, and the spread of diseases. Diamond's thought-provoking work challenges readers to reconsider the historical narrative and recognize the complex interplay of factors that have shaped the course of human history.",
     "name": "Fashion Forward: Trends and Influences",
     "image": "https://i.ibb.co/D4fhwpt/book11.jpg",
@@ -165,7 +154,6 @@
     "picked_by_author": false
   },
   {
-    "_id": "5f732b05a9c18e0001c0b2ac",
     "content": "Yuval Noah Harari's groundbreaking book explores the unique trajectory of humankind, from our humble beginnings as hunter-gatherers to our current dominance over the planet. Harari challenges traditional notions of human progress and argues that our species' success is largely due to our ability to cooperate effectively and communicate through complex language. Harari's work provides a fresh perspective on human history, prompting us to question our place in the world and the implications of our actions for the future.",
     "name": "The Fashion Designer's Handbook",
     "image": "https://i.ibb.co/281CNp7/book12.jpg",
@@ -180,7 +168,6 @@
     "picked_by_author": true
   },
   {
-    "_id": "5f732b05a9c18e0001c0b2ad",
     "content": "Peter Frankopan's meticulously researched book challenges the traditional Eurocentric view of history, arguing that the Silk Roads, a network of trade routes connecting East and West for centuries, played a far more significant role in shaping the global landscape than previously acknowledged. Frankopan traces the flow of goods, ideas, and cultures along these ancient routes, revealing their profound impact on political systems, religious beliefs, and artistic expressions. His work offers a fascinating and thought-provoking exploration of global interconnectedness and the enduring legacy of the Silk Roads.",
     "name": "Theatrical Masterpieces: A Collection of Classic Plays",
     "image": "https://i.ibb.co/WB3PXt8/book13.jpg",
@@ -195,7 +182,6 @@
     "picked_by_author": false
   },
   {
-    "_id": "5f732b05a9c18e0001c0b2ae",
     "content": "In a society engineered for happiness and stability, where people are conditioned from birth to fulfill their assigned roles, Bernard Marx and Lenina Crowne embark on a journey that shatters their illusions of utopia. As they venture beyond the confines of their controlled society, they encounter the harsh realities of the natural world and the consequences of suppressing individual freedom and human emotion. Huxley's satirical novel challenges the pursuit of happiness at the expense of individuality, questioning the very foundations of a society built on genetic engineering and social conditioning.",
     "name": "Behind the Curtain: The Life of a Broadway Star",
     "image": "https://i.ibb.co/x85rJc2/book14.jpg",
@@ -210,7 +196,6 @@
     "picked_by_author": true
   },
   {
-    "_id": "5f732b05a9c18e0001c0b2af",
     "content": "yland Grace, an amnesiac scientist, wakes up on a spaceship with no memory of who he is or how he got there. As he gradually pieces together his identity and his mission, he discovers that he is on a one-way journey to Tau Ceti, a nearby star system, tasked with saving Earth from an alien threat. With limited resources and no clear path forward, Ryland must rely on his scientific expertise, his newfound allies, and his unwavering determination to fulfill his mission and ensure the survival of humanity. Weir's thrilling and thought-provoking novel explores the power of science and cooperation in the face of seemingly insurmountable challenges",
     "name": "Dramatic Monologues: From Stage to Screen",
     "image": "https://i.ibb.co/N1qcjpS/book15.jpg",
@@ -225,7 +210,6 @@
     "picked_by_author": false
   },
   {
-    "_id": "5f732b05a9c18e0001c0b2ag",
     "content": "Mark Watney, an astronaut on a mission to Mars, finds himself stranded and presumed dead after a fierce storm. Left alone with limited resources and no means of communication, Watney must use his ingenuity, scientific knowledge, and unwavering determination to survive and find a way to signal back to Earth. Weir's captivating novel showcases the power of human resilience, the ingenuity of the human spirit, and the unwavering hope that drives us to overcome seemingly insurmountable challenges.",
     "name": "The Drama Teacher's Guide: Techniques and Tips for Success",
     "image": "https://i.ibb.co/Bn9wk1P/book16.jpg",

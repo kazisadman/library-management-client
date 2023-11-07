@@ -1,7 +1,23 @@
+import axios from "axios";
 import PropTypes from "prop-types";
 
 const Borrowedtable = ({ borrowedbook }) => {
-  const { image, name, author, category } = borrowedbook;
+  const { _id, image, name, author, category, borrowdate, returndate } =
+    borrowedbook;
+
+  const handleBorrowdelete = (id) => {
+    axios
+      .delete(`http://localhost:5000/borrowbook/${id}`, borrowedbook)
+      .then((data) => {
+        console.log(data);
+        const toast = document.getElementById("success-alert");
+        toast.classList.remove("hidden");
+        setTimeout(() => {
+          toast.classList.add("hidden");
+        }, 3000);
+      })
+      .catch((err) => console.error(err));
+  };
 
   return (
     <>
@@ -24,14 +40,24 @@ const Borrowedtable = ({ borrowedbook }) => {
           <td>
             <div className="font-bold">{category}</div>
           </td>
-          <td>11/12/2023</td>
-          <td>23/12/2013</td>
+          <td>{borrowdate}</td>
+          <td>{returndate}</td>
           <th>
-            <button className="btn btn-ghost btn-xs">Return</button>
+            <button
+              onClick={() => handleBorrowdelete(_id)}
+              className="btn btn-ghost btn-xs"
+            >
+              Return
+            </button>
           </th>
         </tr>
       </tbody>
       {/* foot */}
+      <div id="success-alert" className="toast hidden">
+        <div className="alert alert-success">
+          <span>Returned Book Successfully</span>
+        </div>
+      </div>
     </>
   );
 };

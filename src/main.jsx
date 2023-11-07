@@ -30,32 +30,32 @@ const router = createBrowserRouter([
       {
         path: "/:catagory",
         element: <Catagorybooks></Catagorybooks>,
-        loader: () => fetch("/booksinfo.json"),
+        loader: () => fetch("http://localhost:5000/booksinfo"),
       },
       {
         path: "/:catagory/:id",
         element: <Bookdetails></Bookdetails>,
-        loader: () => fetch("/booksinfo.json"),
+        loader: () => fetch("http://localhost:5000/booksinfo"),
       },
       {
         path: "/:catagory/:id/read",
         element: <Read></Read>,
-        loader: () => fetch("/booksinfo.json"),
+        loader: () => fetch("http://localhost:5000/booksinfo"),
       },
       {
         path: "/borrowedbooks",
         element: <Borrowbook></Borrowbook>,
-        loader: () => fetch("/borrowed.json"),
+        loader: () => fetch("http://localhost:5000/borrowbook"),
       },
       {
         path: "/allbooks",
         element: <Allbooks></Allbooks>,
-        loader: () => fetch("/booksinfo.json"),
+        loader: () => fetch("http://localhost:5000/booksinfo"),
       },
       {
         path: "/update/:id",
         element: <Updatebook></Updatebook>,
-        loader: () => fetch("/booksinfo.json"),
+        loader: () => fetch("http://localhost:5000/booksinfo"),
       },
     ],
   },
