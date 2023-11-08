@@ -1,19 +1,23 @@
 import axios from "axios";
 import PropTypes from "prop-types";
 import { useEffect } from "react";
+import Rating from "react-rating";
 import { Link } from "react-router-dom";
 
 const Bookdetailscard = ({ bookdetail }) => {
   const {
+    _id,
     name,
     image,
-    quantity,
     author,
     rating,
     category,
     long_description,
     format,
+    short_description,
   } = bookdetail;
+
+  let { quantity } = bookdetail;
 
   useEffect(() => {
     if (quantity <= 0) {
@@ -21,6 +25,25 @@ const Bookdetailscard = ({ bookdetail }) => {
       borrowBtn.classList.add("btn-disabled");
     }
   }, [quantity]);
+
+  const updateQuantity = () => {
+    quantity -= 1;
+    const updatedQuantity = {
+      name,
+      image,
+      author,
+      rating,
+      category,
+      short_description,
+      format,
+      quantity,
+    };
+
+    axios
+      .put(`http://localhost:5000/booksinfo/${_id}`, updatedQuantity)
+      .then((res) => console.log(res))
+      .catch((err) => console.error(err));
+  };
 
   const handleBorrowbook = (e) => {
     e.preventDefault();
@@ -30,17 +53,23 @@ const Bookdetailscard = ({ bookdetail }) => {
     const email = form.email.value;
     const borrowdate = form.borrowdate.value;
     const returndate = form.returndate.value;
+    const id = _id
     console.log(name, author);
 
     const newbook = {
       username,
       email,
+      id,
       borrowdate,
       returndate,
       name,
       image,
       author,
       category,
+      quantity,
+      format,
+      rating,
+      short_description,
     };
 
     axios
@@ -52,8 +81,11 @@ const Bookdetailscard = ({ bookdetail }) => {
         setTimeout(() => {
           toast.classList.add("hidden");
         }, 3000);
+        updateQuantity();
       })
       .catch((err) => console.error(err));
+
+    e.target.reset();
   };
 
   return (
@@ -63,7 +95,7 @@ const Bookdetailscard = ({ bookdetail }) => {
           <img src={image} className="max-w-sm rounded-lg shadow-2xl" />
           <div>
             <h1 className="text-5xl font-bold"> {name}</h1>
-            <h2>{rating}</h2>
+            <Rating initialRating={rating} readonly></Rating>
             <p className="py-6 text-lg">{long_description}</p>
             <h2 className="text-xl font-semibold">
               {" "}

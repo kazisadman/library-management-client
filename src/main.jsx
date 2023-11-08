@@ -12,6 +12,9 @@ import Allbooks from "./Pages/Allbooks";
 import Updatebook from "./Pages/Updatebook";
 import Error from "./Pages/Error";
 import Read from "./Pages/Read";
+import Login from "./Pages/Login";
+import Authcontext from "./Context/Authcontext";
+import Register from "./Pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -57,12 +60,22 @@ const router = createBrowserRouter([
         element: <Updatebook></Updatebook>,
         loader: () => fetch("http://localhost:5000/booksinfo"),
       },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <Authcontext>
+      <RouterProvider router={router}></RouterProvider>
+    </Authcontext>
   </React.StrictMode>
 );

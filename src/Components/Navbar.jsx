@@ -1,6 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Authcontextprovider } from "../Context/Authcontext";
+import { BiUserCircle } from "react-icons/bi";
 // import { BiUserCircle } from "react-icons/bi";
 const Navbar = () => {
+  const { userLogout, user } = useContext(Authcontextprovider);
   const navLinks = (
     <>
       <li>
@@ -17,6 +21,11 @@ const Navbar = () => {
       </li>
     </>
   );
+
+  const handleLogout = () => {
+    userLogout();
+  };
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -44,13 +53,40 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <img src="https://i.ibb.co/ysLWJ78/logo.png" className="w-1/2 h-16" alt="" />
+        <img
+          src="https://i.ibb.co/ysLWJ78/logo.png"
+          className="w-1/2 h-16"
+          alt=""
+        />
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <div className="flex gap-2 items-center">
+          {user?.displayName && <h2>{user.displayName}</h2>}
+          {user?.photoURL ? (
+            <div className="avatar">
+              <div className="w-8 rounded-full">
+                <img src={user.photoURL} />
+              </div>
+            </div>
+          ) : (
+            <BiUserCircle className="text-4xl"></BiUserCircle>
+          )}
+        </div>
+        {!user ? (
+          <Link to={"/login"}>
+            <button className="btn bg-[#FF7A00] text-white">Login</button>
+          </Link>
+        ) : (
+          <button
+            onClick={handleLogout}
+            className="btn bg-[#FF7A00] text-white"
+          >
+            logout
+          </button>
+        )}{" "}
       </div>
     </div>
   );

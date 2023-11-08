@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 
@@ -15,6 +16,7 @@ const Updatebook = () => {
   }, [booksinfo, id]);
 
   const {
+    _id,
     name,
     image,
     author,
@@ -25,6 +27,55 @@ const Updatebook = () => {
     quantity,
   } = selectedbook;
 
+  const [formatvalue, setFormatvalue] = useState("");
+  const [categoryvalue, setCategoryvalue] = useState("");
+
+  useEffect(() => {
+    if (format && category) {
+      setFormatvalue(format);
+      setCategoryvalue(category);
+    }
+  }, [format, category]);
+
+  const handleUpdatebook = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const name = form.bookname.value;
+    const author = form.author.value;
+    const image = form.image.value;
+    const format = formatvalue;
+    const category = categoryvalue;
+    const quantity = form.quantity.value;
+    const rating = form.rating.value;
+    const short_description = form.shortdescription.value;
+
+    const newbook = {
+      name,
+      author,
+      image,
+      format,
+      category,
+      quantity,
+      rating,
+      short_description,
+    };
+    console.log(newbook);
+
+    axios
+      .put(`http://localhost:5000/booksinfo/${_id}`, newbook)
+      .then((data) => {
+        console.log(data);
+        const toast = document.getElementById("success-alert");
+        toast.classList.remove("hidden");
+        setTimeout(() => {
+          toast.classList.add("hidden");
+        }, 3000);
+      })
+      .catch((err) => console.error(err));
+  };
+
   return (
     <div>
       <div className="flex justify-center items-center">
@@ -32,7 +83,7 @@ const Updatebook = () => {
           Update book
         </h1>
       </div>
-      <form action="">
+      <form onSubmit={handleUpdatebook}>
         <div className="flex justify-between gap-5">
           <div className="form-control w-1/2">
             <label className="label">
@@ -41,7 +92,7 @@ const Updatebook = () => {
             <input
               type="text"
               placeholder="Name"
-              name="book-name"
+              name="bookname"
               className="input input-bordered"
               defaultValue={name}
               required
@@ -53,7 +104,7 @@ const Updatebook = () => {
             </label>
             <input
               type="text"
-              name="author-name"
+              name="author"
               placeholder="Author Name"
               className="input input-bordered"
               defaultValue={author}
@@ -82,11 +133,11 @@ const Updatebook = () => {
             <select
               className="select select-bordered w-full"
               name="format"
+              value={formatvalue}
               defaultValue={format}
+              onChange={(e) => setFormatvalue(e.target.value)}
             >
-              <option disabled selected>
-                Format
-              </option>
+              <option disabled>Format</option>
               <option value="Hardcover">Hardcover</option>
               <option value="Paperback">Paperback</option>
             </select>
@@ -98,11 +149,11 @@ const Updatebook = () => {
             <select
               className="select select-bordered w-full"
               name="category"
+              value={categoryvalue}
               defaultValue={category}
+              onChange={(e) => setCategoryvalue(e.target.value)}
             >
-              <option disabled selected>
-                Category
-              </option>
+              <option disabled>Category</option>
               <option>History</option>
               <option>Drama</option>
               <option>Fashion</option>
@@ -114,7 +165,7 @@ const Updatebook = () => {
               <span className="label-text">Quantity</span>
             </label>
             <input
-              type="text"
+              type="number"
               name="quantity"
               placeholder="Quantity"
               className="input input-bordered"
@@ -127,7 +178,7 @@ const Updatebook = () => {
               <span className="label-text">Rating</span>
             </label>
             <input
-              type="text"
+              type="number"
               name="rating"
               placeholder="Rating"
               className="input input-bordered"
@@ -142,7 +193,7 @@ const Updatebook = () => {
           </label>
           <textarea
             type="text"
-            name="short-description"
+            name="shortdescription"
             placeholder="Short Description"
             className="input input-bordered textarea textarea-lg w-full "
             defaultValue={short_description}
@@ -153,6 +204,11 @@ const Updatebook = () => {
           <button className="btn btn-primary">Update book</button>
         </div>
       </form>
+      <div id="success-alert" className="toast hidden">
+        <div className="alert alert-success">
+          <span>Updated Book Successfully</span>
+        </div>
+      </div>
     </div>
   );
 };

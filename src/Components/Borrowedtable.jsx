@@ -2,8 +2,40 @@ import axios from "axios";
 import PropTypes from "prop-types";
 
 const Borrowedtable = ({ borrowedbook }) => {
-  const { _id, image, name, author, category, borrowdate, returndate } =
-    borrowedbook;
+  const {
+    _id,
+    borrowdate,
+    returndate,
+    name,
+    image,
+    author,
+    category,
+    format,
+    rating,
+    short_description,
+  } = borrowedbook;
+
+  let { quantity } = borrowedbook;
+
+  const updateQuantity = (id) => {
+    console.log(quantity);
+
+    const updatedQuantity = {
+      name,
+      author,
+      image,
+      format,
+      category,
+      quantity,
+      rating,
+      short_description,
+    };
+
+    axios
+      .put(`http://localhost:5000/booksinfo/${id}`, updatedQuantity)
+      .then((res) => console.log(res))
+      .catch((err) => console.error(err));
+  };
 
   const handleBorrowdelete = (id) => {
     axios
@@ -15,6 +47,8 @@ const Borrowedtable = ({ borrowedbook }) => {
         setTimeout(() => {
           toast.classList.add("hidden");
         }, 3000);
+
+        updateQuantity(id);
       })
       .catch((err) => console.error(err));
   };

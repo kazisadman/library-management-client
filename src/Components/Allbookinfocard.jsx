@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import Rating from "react-rating";
 
 const Allbookinfocard = ({ bookinfo }) => {
   const { _id, name, image, author, category, rating, format } = bookinfo;
@@ -13,7 +14,7 @@ const Allbookinfocard = ({ bookinfo }) => {
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
           <p>By: {author}</p>
-          <p>{rating}</p>
+          <Rating initialRating={rating} readonly></Rating>
           <div className="card-actions justify-start">
             <div className="badge badge-outline">{category}</div>
             <div className="badge badge-outline">{format}</div>

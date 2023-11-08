@@ -12,7 +12,7 @@ const Addbook = () => {
     const category = form.category.value;
     const quantity = form.quantity.value;
     const rating = form.rating.value;
-    const shortdescription = form.shortdescription.value;
+    const short_description = form.shortdescription.value;
 
     const newbook = {
       name,
@@ -22,7 +22,7 @@ const Addbook = () => {
       category,
       quantity,
       rating,
-      shortdescription,
+      short_description,
     };
     console.log(newbook);
 
@@ -119,7 +119,7 @@ const Addbook = () => {
               <span className="label-text">Quantity</span>
             </label>
             <input
-              type="text"
+              type="number"
               name="quantity"
               placeholder="Quantity"
               className="input input-bordered"
@@ -131,7 +131,7 @@ const Addbook = () => {
               <span className="label-text">Rating</span>
             </label>
             <input
-              type="text"
+              type="number"
               name="rating"
               placeholder="Rating"
               className="input input-bordered"
