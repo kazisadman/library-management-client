@@ -1,8 +1,17 @@
-# React + Vite
+# Pustok House
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website live link - https://library-management-8ios7w9wo-sadman-nafes-projects.vercel.app 
 
-Currently, two official plugins are available:
+Key features-
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1.Get books based on catagory.You can borrow as well as read introduction.
+
+2.You have login to access any of the pages execpt home.
+
+3.You can see your borrow book list on 'borrowed books' page.
+
+4.You can login using email as well as google.
+
+5.You can add book in the database as well as update them.
+
+

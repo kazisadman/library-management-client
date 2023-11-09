@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import PropTypes from "prop-types";
 
 const Borrowedtable = ({ matchedbook }) => {
@@ -31,15 +31,21 @@ const Borrowedtable = ({ matchedbook }) => {
       short_description,
     };
     console.log(updatedQuantity);
-    // axios
-    //   .put(`http://localhost:5000/booksinfo/${id}`, updatedQuantity)
-    //   .then((res) => console.log(res))
-    //   .catch((err) => console.error(err));
   };
 
   const handleBorrowdelete = (id) => {
-    axios
-      .delete(`http://localhost:5000/borrowbook/${id}`, matchedbook)
+    fetch(
+      `https://library-management-8ios7w9wo-sadman-nafes-projects.vercel.app/borrowbook/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(matchedbook),
+      }
+    )
+      .then((res) => res.json())
+
       .then((data) => {
         console.log(data);
         const toast = document.getElementById("success-alert");
@@ -49,8 +55,7 @@ const Borrowedtable = ({ matchedbook }) => {
         }, 3000);
 
         updateQuantity(id);
-      })
-      .catch((err) => console.error(err));
+      });
   };
 
   return (

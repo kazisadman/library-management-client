@@ -6,7 +6,9 @@ const Bestsellingbooks = () => {
   const [bestsellings, setBestsellings] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/booksinfo")
+    fetch(
+      "https://library-management-8ios7w9wo-sadman-nafes-projects.vercel.app/booksinfo"
+    )
       .then((res) => res.json())
       .then((data) => setbooksinfo(data));
   }, []);

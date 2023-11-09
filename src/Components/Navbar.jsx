@@ -38,7 +38,7 @@ const Navbar = () => {
         <NavLink to={"/allbooks"}>All Books</NavLink>
       </li>
       <li>
-        <NavLink to={`${user.email}/borrowedbooks`}>Borrowed Books</NavLink>
+        <NavLink to={`${user?.email}/borrowedbooks`}>Borrowed Books</NavLink>
       </li>
     </>
   );

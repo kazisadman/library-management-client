@@ -42,7 +42,10 @@ const router = createBrowserRouter([
             <Catagorybooks></Catagorybooks>
           </Priveteroute>
         ),
-        loader: () => fetch("http://localhost:5000/booksinfo"),
+        loader: () =>
+          fetch(
+            "https://library-management-8ios7w9wo-sadman-nafes-projects.vercel.app/booksinfo"
+          ),
       },
       {
         path: "/:catagory/:id",
@@ -51,12 +54,18 @@ const router = createBrowserRouter([
             <Bookdetails></Bookdetails>
           </Priveteroute>
         ),
-        loader: () => fetch("http://localhost:5000/booksinfo"),
+        loader: () =>
+          fetch(
+            "https://library-management-8ios7w9wo-sadman-nafes-projects.vercel.app/booksinfo"
+          ),
       },
       {
         path: "/:catagory/:id/read",
         element: <Read></Read>,
-        loader: () => fetch("http://localhost:5000/booksinfo"),
+        loader: () =>
+          fetch(
+            "https://library-management-8ios7w9wo-sadman-nafes-projects.vercel.app/booksinfo"
+          ),
       },
       {
         path: "/:email/borrowedbooks",
@@ -65,7 +74,10 @@ const router = createBrowserRouter([
             <Borrowbook></Borrowbook>
           </Priveteroute>
         ),
-        loader: () => fetch("http://localhost:5000/borrowbook"),
+        loader: () =>
+          fetch(
+            "https://library-management-8ios7w9wo-sadman-nafes-projects.vercel.app/borrowbook"
+          ),
       },
       {
         path: "/allbooks",
@@ -74,12 +86,18 @@ const router = createBrowserRouter([
             <Allbooks></Allbooks>
           </Priveteroute>
         ),
-        loader: () => fetch("http://localhost:5000/booksinfo"),
+        loader: () =>
+          fetch(
+            "https://library-management-8ios7w9wo-sadman-nafes-projects.vercel.app/booksinfo"
+          ),
       },
       {
         path: "/update/:id",
         element: <Updatebook></Updatebook>,
-        loader: () => fetch("http://localhost:5000/booksinfo"),
+        loader: () =>
+          fetch(
+            "https://library-management-8ios7w9wo-sadman-nafes-projects.vercel.app/booksinfo"
+          ),
       },
       {
         path: "/login",

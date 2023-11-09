@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 
 const Addbook = () => {
   const handleAddbook = (e) => {
@@ -26,8 +26,24 @@ const Addbook = () => {
     };
     console.log(newbook);
 
-    axios
-      .post("http://localhost:5000/booksinfo", newbook)
+    // axios
+    //   .post(
+    //     "https://library-management-8ios7w9wo-sadman-nafes-projects.vercel.app/booksinfo",
+    //     { withCredentials: true },
+    //     newbook
+    //   )
+    fetch(
+      `https://library-management-8ios7w9wo-sadman-nafes-projects.vercel.app/booksinfo/`,
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newbook),
+      }
+    )
+      .then((res) => res.json())
+
       .then((data) => {
         console.log(data);
         const toast = document.getElementById("success-alert");
@@ -35,8 +51,8 @@ const Addbook = () => {
         setTimeout(() => {
           toast.classList.add("hidden");
         }, 3000);
-      })
-      .catch((err) => console.error(err));
+      });
+    // .catch((err) => console.error(err));
 
     e.target.reset();
   };
@@ -93,9 +109,7 @@ const Addbook = () => {
               <span className="label-text">Format</span>
             </label>
             <select className="select select-bordered w-full" name="format">
-              <option disabled>
-                Format
-              </option>
+              <option disabled>Format</option>
               <option>Hardcover</option>
               <option>Paperback</option>
             </select>
@@ -105,9 +119,7 @@ const Addbook = () => {
               <span className="label-text">Category</span>
             </label>
             <select className="select select-bordered w-full" name="category">
-              <option disabled>
-                Category
-              </option>
+              <option disabled>Category</option>
               <option>History</option>
               <option>Drama</option>
               <option>Fashion</option>

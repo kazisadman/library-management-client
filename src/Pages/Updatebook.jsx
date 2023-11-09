@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 
@@ -63,8 +63,23 @@ const Updatebook = () => {
     };
     console.log(newbook);
 
-    axios
-      .patch(`http://localhost:5000/booksinfo/${_id}`, newbook)
+    // axios
+    //   .patch(
+    //     `https://library-management-8ios7w9wo-sadman-nafes-projects.vercel.app/booksinfo/${_id}`,
+    //     { withCredentials: true },
+    //     newbook
+    // )
+    fetch(
+      `https://library-management-8ios7w9wo-sadman-nafes-projects.vercel.app/booksinfo/${_id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newbook),
+      }
+    )
+      .then((res) => res.json())
       .then((data) => {
         console.log(data);
         const toast = document.getElementById("success-alert");
@@ -72,8 +87,8 @@ const Updatebook = () => {
         setTimeout(() => {
           toast.classList.add("hidden");
         }, 3000);
-      })
-      .catch((err) => console.error(err));
+      });
+    // .catch((err) => console.error(err));
   };
 
   return (

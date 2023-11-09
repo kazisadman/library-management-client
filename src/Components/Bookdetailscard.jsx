@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import PropTypes from "prop-types";
 import { useContext, useEffect, useState } from "react";
 import Rating from "react-rating";
@@ -42,10 +42,18 @@ const Bookdetailscard = ({ bookdetail }) => {
       quantity,
     };
 
-    axios
-      .patch(`http://localhost:5000/booksinfo/${_id}`, updatedQuantity)
-      .then((res) => console.log(res))
-      .catch((err) => console.error(err));
+    fetch(
+      `https://library-management-8ios7w9wo-sadman-nafes-projects.vercel.app/booksinfo/${_id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updatedQuantity),
+      }
+    )
+      .then((res) => res.json(res))
+      .then((data) => console.log(data));
   };
 
   const { user } = useContext(Authcontextprovider);
@@ -77,8 +85,17 @@ const Bookdetailscard = ({ bookdetail }) => {
       short_description,
     };
 
-    axios
-      .post("http://localhost:5000/borrowbook", newbook)
+    fetch(
+      `https://library-management-8ios7w9wo-sadman-nafes-projects.vercel.app/borrowbook`,
+      {
+        method: "PATCH",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newbook),
+      }
+    )
+      .then((res) => res.json())
       .then((data) => {
         console.log(data);
         const toast = document.getElementById("success-alert");
@@ -90,8 +107,7 @@ const Bookdetailscard = ({ bookdetail }) => {
           toast.classList.add("hidden");
         }, 3000);
         updateQuantity();
-      })
-      .catch((err) => console.error(err));
+      });
 
     setIsborrowed(true);
 
