@@ -47,8 +47,8 @@ const Updatebook = () => {
     const image = form.image.value;
     const format = formatvalue;
     const category = categoryvalue;
-    const quantity = form.quantity.value;
-    const rating = form.rating.value;
+    const quantity = parseInt(form.quantity.value);
+    const rating = parseFloat(form.rating.value);
     const short_description = form.shortdescription.value;
 
     const newbook = {
@@ -64,7 +64,7 @@ const Updatebook = () => {
     console.log(newbook);
 
     axios
-      .put(`http://localhost:5000/booksinfo/${_id}`, newbook)
+      .patch(`http://localhost:5000/booksinfo/${_id}`, newbook)
       .then((data) => {
         console.log(data);
         const toast = document.getElementById("success-alert");
@@ -178,7 +178,7 @@ const Updatebook = () => {
               <span className="label-text">Rating</span>
             </label>
             <input
-              type="number"
+              type="text"
               name="rating"
               placeholder="Rating"
               className="input input-bordered"

@@ -15,6 +15,7 @@ import Read from "./Pages/Read";
 import Login from "./Pages/Login";
 import Authcontext from "./Context/Authcontext";
 import Register from "./Pages/Register";
+import Priveteroute from "./Private/Privateroute";
 
 const router = createBrowserRouter([
   {
@@ -28,16 +29,28 @@ const router = createBrowserRouter([
       },
       {
         path: "/addbook",
-        element: <Addbook></Addbook>,
+        element: (
+          <Priveteroute>
+            <Addbook></Addbook>
+          </Priveteroute>
+        ),
       },
       {
         path: "/:catagory",
-        element: <Catagorybooks></Catagorybooks>,
+        element: (
+          <Priveteroute>
+            <Catagorybooks></Catagorybooks>
+          </Priveteroute>
+        ),
         loader: () => fetch("http://localhost:5000/booksinfo"),
       },
       {
         path: "/:catagory/:id",
-        element: <Bookdetails></Bookdetails>,
+        element: (
+          <Priveteroute>
+            <Bookdetails></Bookdetails>
+          </Priveteroute>
+        ),
         loader: () => fetch("http://localhost:5000/booksinfo"),
       },
       {
@@ -46,13 +59,21 @@ const router = createBrowserRouter([
         loader: () => fetch("http://localhost:5000/booksinfo"),
       },
       {
-        path: "/borrowedbooks",
-        element: <Borrowbook></Borrowbook>,
+        path: "/:email/borrowedbooks",
+        element: (
+          <Priveteroute>
+            <Borrowbook></Borrowbook>
+          </Priveteroute>
+        ),
         loader: () => fetch("http://localhost:5000/borrowbook"),
       },
       {
         path: "/allbooks",
-        element: <Allbooks></Allbooks>,
+        element: (
+          <Priveteroute>
+            <Allbooks></Allbooks>
+          </Priveteroute>
+        ),
         loader: () => fetch("http://localhost:5000/booksinfo"),
       },
       {

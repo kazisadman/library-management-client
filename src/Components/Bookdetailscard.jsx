@@ -1,8 +1,9 @@
 import axios from "axios";
 import PropTypes from "prop-types";
-import { useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import Rating from "react-rating";
 import { Link } from "react-router-dom";
+import { Authcontextprovider } from "../Context/Authcontext";
 
 const Bookdetailscard = ({ bookdetail }) => {
   const {
@@ -19,12 +20,14 @@ const Bookdetailscard = ({ bookdetail }) => {
 
   let { quantity } = bookdetail;
 
+  const [isBorrowed, setIsborrowed] = useState(false);
+
   useEffect(() => {
-    if (quantity <= 0) {
+    if (quantity <= 0 || isBorrowed === true) {
       const borrowBtn = document.getElementById("borrow-btn");
       borrowBtn.classList.add("btn-disabled");
     }
-  }, [quantity]);
+  }, [quantity, isBorrowed]);
 
   const updateQuantity = () => {
     quantity -= 1;
@@ -40,10 +43,12 @@ const Bookdetailscard = ({ bookdetail }) => {
     };
 
     axios
-      .put(`http://localhost:5000/booksinfo/${_id}`, updatedQuantity)
+      .patch(`http://localhost:5000/booksinfo/${_id}`, updatedQuantity)
       .then((res) => console.log(res))
       .catch((err) => console.error(err));
   };
+
+  const { user } = useContext(Authcontextprovider);
 
   const handleBorrowbook = (e) => {
     e.preventDefault();
@@ -53,7 +58,7 @@ const Bookdetailscard = ({ bookdetail }) => {
     const email = form.email.value;
     const borrowdate = form.borrowdate.value;
     const returndate = form.returndate.value;
-    const id = _id
+    const id = _id;
     console.log(name, author);
 
     const newbook = {
@@ -77,6 +82,9 @@ const Bookdetailscard = ({ bookdetail }) => {
       .then((data) => {
         console.log(data);
         const toast = document.getElementById("success-alert");
+        const borrowbtn = document.getElementById("borrow-btn");
+        borrowbtn.classList.add("btn-disabled");
+
         toast.classList.remove("hidden");
         setTimeout(() => {
           toast.classList.add("hidden");
@@ -84,6 +92,8 @@ const Bookdetailscard = ({ bookdetail }) => {
         updateQuantity();
       })
       .catch((err) => console.error(err));
+
+    setIsborrowed(true);
 
     e.target.reset();
   };
@@ -113,7 +123,7 @@ const Bookdetailscard = ({ bookdetail }) => {
               {/* You can open the modal using document.getElementById('ID').showModal() method */}
               <button
                 id="borrow-btn"
-                className="btn btn-primary mr-6"
+                className="btn btn-primary mr-6 disabled"
                 onClick={() =>
                   document.getElementById("my_modal_3").showModal()
                 }
@@ -138,6 +148,7 @@ const Bookdetailscard = ({ bookdetail }) => {
                         placeholder="Name"
                         name="name"
                         className="input input-bordered"
+                        defaultValue={user?.displayName}
                         required
                       />
                     </div>
@@ -150,6 +161,7 @@ const Bookdetailscard = ({ bookdetail }) => {
                         name="email"
                         placeholder="Email"
                         className="input input-bordered"
+                        defaultValue={user.email}
                         required
                       />
                     </div>

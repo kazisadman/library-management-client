@@ -10,8 +10,8 @@ const Addbook = () => {
     const image = form.image.value;
     const format = form.format.value;
     const category = form.category.value;
-    const quantity = form.quantity.value;
-    const rating = form.rating.value;
+    const quantity = parseInt(form.quantity.value);
+    const rating = parseFloat(form.rating.value);
     const short_description = form.shortdescription.value;
 
     const newbook = {
@@ -93,7 +93,7 @@ const Addbook = () => {
               <span className="label-text">Format</span>
             </label>
             <select className="select select-bordered w-full" name="format">
-              <option disabled selected>
+              <option disabled>
                 Format
               </option>
               <option>Hardcover</option>
@@ -105,7 +105,7 @@ const Addbook = () => {
               <span className="label-text">Category</span>
             </label>
             <select className="select select-bordered w-full" name="category">
-              <option disabled selected>
+              <option disabled>
                 Category
               </option>
               <option>History</option>

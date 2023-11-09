@@ -1,8 +1,23 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import Borrowedtable from "../Components/Borrowedtable";
+import { useEffect, useState } from "react";
 
 const Borrowbook = () => {
   const borrowedbooks = useLoaderData();
+  const { email } = useParams();
+
+  const [matchedbooks, setMatchedbooks] = useState([]);
+  console.log(matchedbooks);
+
+  useEffect(() => {
+    const exist = borrowedbooks.filter(
+      (borrowedbook) => borrowedbook.email === email
+    );
+    console.log(exist);
+    if (exist) {
+      setMatchedbooks(exist);
+    }
+  }, [borrowedbooks, email]);
   return (
     <div>
       <div>
@@ -19,10 +34,10 @@ const Borrowbook = () => {
               </tr>
             </thead>
 
-            {borrowedbooks.map((borrowedbook) => (
+            {matchedbooks.map((matchedbook) => (
               <Borrowedtable
-                key={borrowedbook._id}
-                borrowedbook={borrowedbook}
+                key={matchedbook._id}
+                matchedbook={matchedbook}
               ></Borrowedtable>
             ))}
           </table>

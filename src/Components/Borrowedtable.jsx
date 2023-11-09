@@ -1,7 +1,7 @@
 import axios from "axios";
 import PropTypes from "prop-types";
 
-const Borrowedtable = ({ borrowedbook }) => {
+const Borrowedtable = ({ matchedbook }) => {
   const {
     _id,
     borrowdate,
@@ -13,11 +13,11 @@ const Borrowedtable = ({ borrowedbook }) => {
     format,
     rating,
     short_description,
-  } = borrowedbook;
+  } = matchedbook;
 
-  let { quantity } = borrowedbook;
+  let { quantity } = matchedbook;
 
-  const updateQuantity = (id) => {
+  const updateQuantity = () => {
     console.log(quantity);
 
     const updatedQuantity = {
@@ -30,16 +30,16 @@ const Borrowedtable = ({ borrowedbook }) => {
       rating,
       short_description,
     };
-
-    axios
-      .put(`http://localhost:5000/booksinfo/${id}`, updatedQuantity)
-      .then((res) => console.log(res))
-      .catch((err) => console.error(err));
+    console.log(updatedQuantity);
+    // axios
+    //   .put(`http://localhost:5000/booksinfo/${id}`, updatedQuantity)
+    //   .then((res) => console.log(res))
+    //   .catch((err) => console.error(err));
   };
 
   const handleBorrowdelete = (id) => {
     axios
-      .delete(`http://localhost:5000/borrowbook/${id}`, borrowedbook)
+      .delete(`http://localhost:5000/borrowbook/${id}`, matchedbook)
       .then((data) => {
         console.log(data);
         const toast = document.getElementById("success-alert");
@@ -97,7 +97,7 @@ const Borrowedtable = ({ borrowedbook }) => {
 };
 
 Borrowedtable.propTypes = {
-  borrowedbook: PropTypes.object,
+  matchedbook: PropTypes.object,
 };
 
 export default Borrowedtable;
